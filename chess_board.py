@@ -2,17 +2,20 @@
 import numpy as np
 import chess
 
-class State(object):
+class State:
+    '''class for state of the board'''
     def __init__(self, board=None):
+        '''Constructor of the class'''
         if board is None:
             self.board = chess.Board()
         else:
             self.board = board
-  
     def key(self):
+        '''function that returns boars, who's turn and whether castling 
+        and en passent is possible'''
         return (self.board.board_fen(), self.board.turn, self.board.castling_rights, self.board.ep_square)
-  
     def serialize(self):
+        '''converts the board to binary values to be fed into the model'''
         assert self.board.is_valid()
         binary_state = np.zeros(64, np.uint8)
         for i in range(64):
@@ -45,10 +48,8 @@ class State(object):
         # 4th column is who's turn it is
         state[4] = (self.board.turn*1.0)
         return state
-  
     def edges(self):
-        return list(self.board.legal_moves)
-  
+        '''return list of legal moves'''
+        return list(self.board.legal_moves) 
 if __name__ == "__main__":
-    s = State()
-
+    S = State()
