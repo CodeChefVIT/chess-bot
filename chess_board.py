@@ -52,5 +52,4 @@ class State:
         '''return list of legal moves'''
         return list(self.board.legal_moves) 
 if __name__ == "__main__":
-    S = State()
-    
+    s = State()
