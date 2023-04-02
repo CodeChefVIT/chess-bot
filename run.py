@@ -21,10 +21,6 @@ class Valuator(object):
     output = self.model(torch.tensor(brd).float())
     return float(output.data[0][0])
 
-# let's write a simple chess value function
-# discussing with friends how simple a minimax + value function can beat me
-# i'm rated about a 1500
-
 MAXVAL = 10000
 class ClassicValuator(object):
   values = {chess.PAWN: 1,
@@ -41,9 +37,6 @@ class ClassicValuator(object):
   def reset(self):
     self.count = 0
 
-  # writing a simple value function based on pieces
-  # good ideas:
-  # https://en.wikipedia.org/wiki/Evaluation_function#In_chess
   def __call__(self, s):
     self.count += 1
     key = s.key()
@@ -93,16 +86,12 @@ def computer_minimax(s, v, depth, a, b, big=False):
     ret = MAXVAL
   if big:
     bret = []
-
-  # can prune here with beam search
   isort = []
   for e in s.board.legal_moves:
     s.board.push(e)
     isort.append((v(s), e))
     s.board.pop()
   move = sorted(isort, key=lambda x: x[0], reverse=s.board.turn)
-
-  # beam search beyond depth 3
   if depth >= 3:
     move = move[:10]
 
@@ -116,12 +105,12 @@ def computer_minimax(s, v, depth, a, b, big=False):
       ret = max(ret, tval)
       a = max(a, ret)
       if a >= b:
-        break  # b cut-off
+        break 
     else:
       ret = min(ret, tval)
       b = min(b, ret)
       if a >= b:
-        break  # a cut-off
+        break  
   if big:
     return ret, bret
   else:
@@ -136,10 +125,7 @@ def explore_leaves(s, v):
   eta = time.time() - start
   print("%.2f -> %.2f: explored %d nodes in %.3f seconds %d/sec" % (bval, cval, v.count, eta, int(v.count/eta)))
   return ret
-
-# chess board and "engine"
 s = State()
-#v = Valuator()
 v = ClassicValuator()
 
 def to_svg(s):
@@ -170,7 +156,6 @@ def selfplay():
   s = State()
 
   ret = '<html><head>'
-  # self play
   while not s.board.is_game_over():
     computer_move(s, v)
     ret += '<img width=600 height=600 src="data:image/svg+xml;base64,%s"></img><br/>' % to_svg(s)
@@ -178,8 +163,6 @@ def selfplay():
 
   return ret
 
-
-# move given in algebraic notation
 @app.route("/move")
 def move():
   if not s.board.is_game_over():
@@ -206,7 +189,6 @@ def move():
   print("hello ran")
   return hello()
 
-# moves given as coordinates of piece moved
 @app.route("/move_coordinates")
 def move_coordinates():
   if not s.board.is_game_over():
