@@ -29,13 +29,12 @@
 
 #### Directions to Install
 ```sh
-$ git clone https://github.com/CodeChefVIT/<Project>
-$ cd <Project>
-$ npm install
+$ git clone https://github.com/CodeChefVIT/chess-bot
+$ cd chess-bot
 ```
 #### Directions to Run
 ```sh
-$ npm serve
+python run.py
 ```
 ## Contributors
 <table>
