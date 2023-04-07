@@ -1,10 +1,10 @@
 <p align="center"><a href="https://www.codechefvit.com" target="_blank"><img src="https://i.ibb.co/4J9LXxS/cclogo.png" width=160 title="CodeChef-VIT" alt="Codechef-VIT"></a>
 </p>
 
-<h2 align="center"> Project Title </h2>
+<h2 align="center"> PawnStar </h2>
 <br/>
 
-> This repository includes a chess engine, which has been inspired by engines such as Stockfish. This engine can be used to play against a human opponent or against another engine. The engine uses a combination of traditional chess algorithms and neural networks to evaluate positions and make moves. The chess engine uses the minimax algorithm with alpha-beta pruning to search for the best move. The evaluation function is based on a combination of piece values, pawn structure, and positional considerations. The depth of the search and the weights of the evaluation function can be configured in the files included in the repository.
+> This repository contains a chess engine using a mix of traditional algorithms and neural networks, employing minimax algorithm and alpha-beta pruning to search for the best move, and allowing for configuration of search depth and evaluation function weights.
 
 ---
 
@@ -12,7 +12,10 @@
   [![UI ](https://img.shields.io/badge/User%20Interface-Link%20to%20UI-orange?style=flat-square&logo=appveyor)](INSERT_UI_LINK_HERE)
 [![GitHub Super-Linter](https://github.com/<OWNER>/<REPOSITORY>/workflows/Lint%20Code%20Base/badge.svg)](https://github.com/marketplace/actions/super-linter)
 ## Features
-- Insert list of features here
+- Uses traditional chess algorithms and neural networks to evaluate positions and make moves
+- Uses minimax algorithm with alpha-beta pruning to search for the best move
+- Evaluation function based on a combination of piece values, pawn structure, and positional considerations
+- Depth of search and weights of the evaluation function can be configured in repository files.
 
 ## Screenshots
 <p align="center">
@@ -20,9 +23,6 @@
 </p>
 <p align="center">
 <img src="https://i.imgur.com/5BxNn9e.png" alt="chess-bot" width="400px"/>
-</p>
-<p align="center">
-<img src="https://i.imgur.com/O7nZBw1.png" alt="chess-bot" width="400px"/>
 </p>
 
 ## Dependencies
@@ -50,7 +50,7 @@ python run.py
 			<img src = "https://i.ibb.co/4J9LXxS/cclogo.png" width="150" height="150" alt="Your Name Here (Insert Your Image Link In Src">
 		</p>
 			<p align="center">
-				<a href = "https://github.com/<GitHub-username>">
+				<a href = "https://github.com/SachinRaghuvanshi2003">
 					<img src = "http://www.iconninja.com/files/241/825/211/round-collaboration-social-github-code-circle-network-icon.svg" width="36" height = "36" alt="GitHub"/>
 				</a>
 			</p>
@@ -61,7 +61,7 @@ python run.py
 			<img src = "https://i.ibb.co/4J9LXxS/cclogo.png" width="150" height="150" alt="Your Name Here (Insert Your Image Link In Src">
 		</p>
 			<p align="center">
-				<a href = "https://github.com/<GitHub-username>">
+				<a href = "https://github.com/Tarran-Sidhaarth">
 					<img src = "http://www.iconninja.com/files/241/825/211/round-collaboration-social-github-code-circle-network-icon.svg" width="36" height = "36" alt="GitHub"/>
 				</a>
 			</p>
