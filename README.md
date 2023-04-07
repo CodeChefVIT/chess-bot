@@ -1,71 +1,33 @@
-<p align="center"><a href="https://www.codechefvit.com" target="_blank"><img src="https://i.ibb.co/4J9LXxS/cclogo.png" width=160 title="CodeChef-VIT" alt="Codechef-VIT"></a>
-</p>
+The chess engine uses the minimax algorithm with alpha-beta pruning to search for the best move. The evaluation function is based on a combination of piece values, pawn structure, and positional considerations. The depth of the search and the weights of the evaluation function can be configured in the files included in the repository.
 
-<h2 align="center"> Project Title </h2>
-<br/>
+This repository includes a chess engine, which has been inspired by engines such as Stockfish. This engine can be used to play against a human opponent or against another engine. The engine uses a combination of traditional chess algorithms and neural networks to evaluate positions and make moves.
 
-> Include project description here.
+Requirements
+Python 3.6 or higher
+TensorFlow 2.0 or higher
+Pandas
+python-chess
 
----
+1. Creating Board; 5 binary digits - first 2: Color, last 3: Type of piece
+2. FEN Notation
+3. Drag n drop; Getting the legal move (sliding pieces: rook, queen, bishop) (others: double pawn move, en passant, knight, pawn → queen, castle)
+4. Concept of Check
+5. Depth
 
-[![DOCS](https://img.shields.io/badge/Documentation-see%20docs-green?style=flat-square&logo=appveyor)](INSERT_LINK_FOR_DOCS_HERE) 
-  [![UI ](https://img.shields.io/badge/User%20Interface-Link%20to%20UI-orange?style=flat-square&logo=appveyor)](INSERT_UI_LINK_HERE)
-[![GitHub Super-Linter](https://github.com/<OWNER>/<REPOSITORY>/workflows/Lint%20Code%20Base/badge.svg)](https://github.com/marketplace/actions/super-linter)
-## Features
-- Insert list of features here
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6004b059-b692-4675-a1d0-015f961e9c96/Untitled.png)
 
-## Screenshots
-<p align="center">
-<img src="https://i.ibb.co/VppxmWZ/cet.png" alt="Common-Entry-Test" width="400px"/>
-</p>
+1. Evaluation Function (How good a move is)
 
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/810b7e6e-0ca0-45af-9071-edc077eaf85d/Untitled.png)
 
-## Dependencies
- - < dependency >
- - < dependency >
-## Instructions
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c16dd495-e9cd-453f-a60f-33629623d503/Untitled.png)
 
-#### Directions to Install
-```sh
-$ git clone https://github.com/CodeChefVIT/<Project>
-$ cd <Project>
-$ npm install
-```
-#### Directions to Run
-```sh
-$ npm serve
-```
-## Contributors
-<table>
-	<tr align="center" style="font-weight:bold">
-		<td>
-		John Doe
-		<p align="center">
-			<img src = "https://i.ibb.co/4J9LXxS/cclogo.png" width="150" height="150" alt="Your Name Here (Insert Your Image Link In Src">
-		</p>
-			<p align="center">
-				<a href = "https://github.com/<GitHub-username>">
-					<img src = "http://www.iconninja.com/files/241/825/211/round-collaboration-social-github-code-circle-network-icon.svg" width="36" height = "36" alt="GitHub"/>
-				</a>
-			</p>
-		</td>
-				<td>
-		John Doe
-		<p align="center">
-			<img src = "https://i.ibb.co/4J9LXxS/cclogo.png" width="150" height="150" alt="Your Name Here (Insert Your Image Link In Src">
-		</p>
-			<p align="center">
-				<a href = "https://github.com/<GitHub-username>">
-					<img src = "http://www.iconninja.com/files/241/825/211/round-collaboration-social-github-code-circle-network-icon.svg" width="36" height = "36" alt="GitHub"/>
-				</a>
-			</p>
-		</td>
-	</tr>
-</table>
+********************Optimization: Alpha Beta Pruning********************
 
-## License
-[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/dc3fc8d1-f4b7-4bec-9ebc-7459de2d7a4a/Untitled.png)
 
-<p align="center">
-	Made with :heart: by <a href="https://www.codechefvit.com" target="_blank">CodeChef-VIT</a>
-</p>
+**********************Transpositions: Getting same result using different moves**********************
+
+Using → Zobrist Hashing (64 bit number to represent current positions)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ed481d54-fa24-4f93-9b79-f7f3993bce3d/Untitled.png)
