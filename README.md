@@ -16,9 +16,14 @@
 
 ## Screenshots
 <p align="center">
-<img src="https://i.ibb.co/VppxmWZ/cet.png" alt="Common-Entry-Test" width="400px"/>
+<img src="https://imgur.com/GQIXBkQ" alt="chess-bot" width="400px"/>
 </p>
-
+<p align="center">
+<img src="https://imgur.com/5BxNn9e" alt="chess-bot" width="400px"/>
+</p>
+<p align="center">
+<img src="https://imgur.com/O7nZBw1" alt="chess-bot" width="400px"/>
+</p>
 
 ## Dependencies
  - Python 3.6 or higher
