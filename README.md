@@ -44,8 +44,19 @@ python run.py
 ## Contributors
 <table>
 	<tr align="center" style="font-weight:bold">
+	<td>
+		Priyanshu Kumar
+		<p align="center">
+			<img src = "https://i.ibb.co/4J9LXxS/cclogo.png" width="150" height="150" alt="Your Name Here (Insert Your Image Link In Src">
+		</p>
+			<p align="center">
+				<a href = "https://github.com/mekken2">
+					<img src = "http://www.iconninja.com/files/241/825/211/round-collaboration-social-github-code-circle-network-icon.svg" width="36" height = "36" alt="GitHub"/>
+				</a>
+			</p>
+		</td>
 		<td>
-		John Doe
+		Sachin Raghuvanshi
 		<p align="center">
 			<img src = "https://i.ibb.co/4J9LXxS/cclogo.png" width="150" height="150" alt="Your Name Here (Insert Your Image Link In Src">
 		</p>
@@ -56,7 +67,7 @@ python run.py
 			</p>
 		</td>
 				<td>
-		John Doe
+		Tarran Sidhaarth
 		<p align="center">
 			<img src = "https://i.ibb.co/4J9LXxS/cclogo.png" width="150" height="150" alt="Your Name Here (Insert Your Image Link In Src">
 		</p>
